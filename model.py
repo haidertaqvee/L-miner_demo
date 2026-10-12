@@ -88,18 +88,22 @@ def train_model(n_samples=80, save=True):
 
 def load_model():
     """Load trained model and scaler from disk."""
-    if not os.path.exists(MODEL_PATH):
+    if not os.path.exists(MODEL_PATH) or not os.path.exists(SCALER_PATH):
         print("[L2] No saved model found. Training now...")
         model, scaler, _ = train_model()
         return model, scaler
 
-    with open(MODEL_PATH, 'rb') as f:
-        model = pickle.load(f)
-    with open(SCALER_PATH, 'rb') as f:
-        scaler = pickle.load(f)
-
-    print("[L2] Model loaded from disk.")
-    return model, scaler
+    try:
+        with open(MODEL_PATH, 'rb') as f:
+            model = pickle.load(f)
+        with open(SCALER_PATH, 'rb') as f:
+            scaler = pickle.load(f)
+        print("[L2] Model loaded from disk.")
+        return model, scaler
+    except Exception as e:
+        print(f"[L2] Warning: Could not load pickled model ({e}). Retraining now...")
+        model, scaler, _ = train_model()
+        return model, scaler
 
 
 # ─────────────────────────────────────────────
