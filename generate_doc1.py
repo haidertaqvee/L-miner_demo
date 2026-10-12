@@ -177,7 +177,7 @@ def build_doc1_docx(filepath):
     tbl_meta = doc.add_table(rows=2, cols=2)
     tbl_meta.alignment = WD_TABLE_ALIGNMENT.CENTER
     meta_data = [
-        ("Project Name:", "L-MINER Mk-II (Autonomous Lunar Mineral Detection Rover)",
+        ("Project Name:", "L-MINER Mk-II: Autonomous Lunar Mineral Prospecting Payload",
          "Institution:", "Institute of Space Technology (IST), Islamabad"),
         ("Scoring Focus:", "Table 6: Item 1 (Publicize Contest Concept & Team Cooperation)",
          "Team Roster:", "Haider Taqvee, Abdul Wasay, Saad, Hajra")
@@ -261,7 +261,7 @@ def build_doc1_docx(filepath):
          "800+ Impressions\n150+ Carousel swipes\n5 STEM club reposts"),
         ("Phase 3: Interactive Demo\n(Oct 25 – Oct 28)", 
          "Engage community with interactive digital twin & poll.",
-         "• 45s screen capture reel of 3D Rover HUD.\n• Community poll on lunar resources.\n• Live Q&A in comments.",
+         "• 45s screen capture reel of 3D Payload HUD & Mobile Simulation.\n• Community poll on lunar resources.\n• Live Q&A in comments.",
          "1,200+ Impressions\n100+ Poll votes\n30+ Comments"),
         ("Phase 4: Final Sprint\n(Oct 29 – Oct 31)", 
          "Team cooperation showcase & competition eve rally.",
@@ -335,9 +335,9 @@ def build_doc1_docx(filepath):
         "Our team is thrilled to participate in ISSSP 2026 Track 3 (Lunar Surface Robotics & Autonomous Exploration)! 🌙\n\n"
         "As humanity prepares to establish sustainable bases on the Moon through Artemis and international lunar research programs, "
         "one question remains paramount: How do we locate volatile water ice trapped inside permanently shadowed craters at 40 Kelvin?\n\n"
-        "Introducing L-MINER Mk-II: An Autonomous Multi-Tier Rover for Subsurface Lunar Mineral Classification.\n"
+        "Introducing L-MINER Mk-II: An Autonomous Multi-Tier Mineral Prospecting Payload System for Lunar Surface Exploration.\n"
         "Equipped with 500 MHz Ground Penetrating Radar, 0.5–2.5 μm VNIR-SWIR Reflectance Spectroscopy, and edge Random Forest ML, "
-        "L-MINER autonomously navigates hazards, monitors power, and maps resources without Earth teleoperation lag.\n\n"
+        "L-MINER's autonomous payload firmware navigates hazards, monitors power, and maps resources without Earth teleoperation lag.\n\n"
         "Proud to represent the Institute of Space Technology alongside teammates Haider Taqvee, Abdul Wasay, Saad, and Hajra.\n\n"
         "Follow our journey as we showcase our 3D digital twin and mission control system before the Oct 31st finals!\n\n"
         "#ISSSP2026 #LunarExploration #SpaceRobotics #ISTIslamabad #MoonToMars #ISRU #AutonomousSystems"
@@ -346,7 +346,7 @@ def build_doc1_docx(filepath):
 
     doc.add_heading("Asset 2: X / Twitter Technical Thread (Phase 2)", level=2)
     post2_text = (
-        "🧵 1/5 How does a rover 'see' water ice buried 2 meters under lunar dust? Here's how our project for #ISSSP2026 Track 3 works! 👇\n\n"
+        "🧵 1/5 How does an autonomous science payload 'see' water ice buried 2 meters under lunar dust? Here's how our project for #ISSSP2026 Track 3 works! 👇\n\n"
         "2/5 Optical cameras only see the top 10 microns of dust. That's why L-MINER Mk-II combines TWO complementary sensors: "
         "an underbelly 500 MHz GPR (for depth) + a robotic-arm VNIR-SWIR Spectrometer (for chemistry). 📡🔬\n\n"
         "3/5 Water ice has a sharp dielectric boundary (ε_r ≈ 3.1) vs dry regolith, creating high-amplitude radar echoes. "
@@ -362,7 +362,7 @@ def build_doc1_docx(filepath):
         "FOR IMMEDIATE RELEASE — IST SPACE SCIENCE & AERONAUTICS\n"
         "IST Student Team Qualifies for Finals in International Space Competition (ISSSP 2026 Track 3)\n\n"
         "ISLAMABAD — A multidisciplinary team of undergraduate engineers from the Institute of Space Technology (IST) "
-        "has qualified for the finals of ISSSP 2026 Track 3 with their autonomous lunar rover project, L-MINER Mk-II.\n\n"
+        "has qualified for the finals of ISSSP 2026 Track 3 with their autonomous lunar prospecting payload project, L-MINER Mk-II.\n\n"
         "The project addresses the critical challenge of autonomous In-Situ Resource Utilization (ISRU) prospecting in the lunar South Pole. "
         "By fusing multi-frequency Ground Penetrating Radar with Short-Wave Infrared Spectroscopy and a three-tier hierarchical autonomy architecture, "
         "the system enables safe, unassisted prospecting inside Permanently Shadowed Regions (PSRs).\n\n"
@@ -561,7 +561,7 @@ def build_doc1_pdf(filepath):
 
     # Meta Table
     meta_table_data = [
-        [Paragraph("<b>Project:</b> L-MINER Mk-II Rover", style_tbl_cell),
+        [Paragraph("<b>Project:</b> L-MINER Mk-II Autonomous Payload", style_tbl_cell),
          Paragraph("<b>Institution:</b> IST Islamabad", style_tbl_cell)],
         [Paragraph("<b>Scoring Item:</b> Item 1: Community Building (10 Pts)", style_tbl_cell),
          Paragraph("<b>Team:</b> Haider, Wasay, Saad, Hajra", style_tbl_cell)]
@@ -621,7 +621,7 @@ def build_doc1_pdf(filepath):
          Paragraph("800+ Impressions<br/>150+ Swipes<br/>5 Club Reposts", style_tbl_cell)],
         [Paragraph("<b>Phase 3: Interactive Demo</b><br/>(Oct 25 – Oct 28)", style_tbl_cell),
          Paragraph("Community engagement with 3D digital twin.", style_tbl_cell),
-         Paragraph("• 45s screen capture reel of 3D Rover HUD<br/>• Community poll on lunar resources<br/>• Live Q&A in comments", style_tbl_cell),
+         Paragraph("• 45s screen capture reel of 3D Payload HUD & Mobile Simulation<br/>• Community poll on lunar resources<br/>• Live Q&A in comments", style_tbl_cell),
          Paragraph("1,200+ Impressions<br/>100+ Poll votes<br/>30+ Comments", style_tbl_cell)],
         [Paragraph("<b>Phase 4: Final Sprint</b><br/>(Oct 29 – Oct 31)", style_tbl_cell),
          Paragraph("Team cooperation showcase & competition eve.", style_tbl_cell),
@@ -682,7 +682,7 @@ def build_doc1_pdf(filepath):
         "one question remains paramount: How do we locate volatile water ice trapped inside permanently shadowed craters at 40 Kelvin?<br/><br/>"
         "Introducing <b>L-MINER Mk-II:</b> An Autonomous Multi-Tier Rover for Subsurface Lunar Mineral Classification.<br/>"
         "Equipped with 500 MHz Ground Penetrating Radar, 0.5–2.5 μm VNIR-SWIR Reflectance Spectroscopy, and edge Random Forest ML, "
-        "L-MINER autonomously navigates hazards, monitors power, and maps resources without Earth teleoperation lag.<br/><br/>"
+        "L-MINER's autonomous payload firmware navigates hazards, monitors power, and maps resources without Earth teleoperation lag.<br/><br/>"
         "Proud to represent IST alongside teammates Haider Taqvee, Abdul Wasay, Saad, and Hajra. Follow our journey before Oct 31st!<br/>"
         "<i>#ISSSP2026 #LunarExploration #SpaceRobotics #ISTIslamabad #MoonToMars #ISRU #AutonomousSystems</i>"
     )
@@ -702,7 +702,7 @@ def build_doc1_pdf(filepath):
     # Twitter Thread Callout
     elements.append(Paragraph("<b>Asset 2: Twitter/X Technical Explainer Thread (Phase 2)</b>", style_h2))
     p2 = (
-        "🧵 <b>1/5</b> How does a rover 'see' water ice buried 2 meters under lunar dust? Here's how our project for #ISSSP2026 Track 3 works! 👇<br/>"
+        "🧵 <b>1/5</b> How does an autonomous science payload 'see' water ice buried 2 meters under lunar dust? Here's how our project for #ISSSP2026 Track 3 works! 👇<br/>"
         "<b>2/5</b> Optical cameras only see the top 10 microns of dust. That's why L-MINER Mk-II combines TWO complementary sensors: "
         "an underbelly 500 MHz GPR (for depth) + a robotic-arm VNIR-SWIR Spectrometer (for chemistry). 📡🔬<br/>"
         "<b>3/5</b> Water ice has a sharp dielectric boundary (ε_r ≈ 3.1) vs dry regolith, creating high-amplitude radar echoes. "

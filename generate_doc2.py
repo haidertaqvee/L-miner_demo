@@ -151,7 +151,7 @@ def build_doc2_docx(filepath):
     tbl_meta = doc.add_table(rows=2, cols=2)
     tbl_meta.alignment = WD_TABLE_ALIGNMENT.CENTER
     meta_data = [
-        ("Poster Title:", "L-MINER Mk-II: Autonomous Multi-Tier Lunar Prospector",
+        ("Poster Title:", "L-MINER Mk-II: Autonomous Science Payload",
          "Format & Dims:", "ISO A0 Portrait (841 x 1189 mm) / 300 DPI"),
         ("Scoring Focus:", "Table 6: Item 2 (Project Scheme, Background, Methods)",
          "Author Roster:", "Haider Taqvee, Abdul Wasay, Saad, Hajra (IST Islamabad)")
@@ -206,7 +206,7 @@ def build_doc2_docx(filepath):
 
     header_block = (
         "POSTER TITLE (96 pt Bold):\n"
-        "L-MINER Mk-II: Autonomous Multi-Tier Rover for Subsurface Lunar Volatile Prospecting and Mineral Classification\n\n"
+        "L-MINER Mk-II: Autonomous Multi-Tier Payload for Subsurface Lunar Volatile Prospecting and Mineral Classification\n\n"
         "SUBTITLE (44 pt Medium):\n"
         "Dual-Modality Subsurface GPR and VNIR-SWIR Spectrometry with Edge Machine Learning for Lunar South Pole Cold Traps\n\n"
         "AUTHOR LIST (32 pt Semi-Bold):\n"
@@ -227,11 +227,11 @@ def build_doc2_docx(filepath):
          "Orbital datasets (Chandrayaan-1 M³, LRO LAMP) confirm surface frost, but cannot resolve subsurface stratigraphy or volume.\n\n"
          "The Ground-Truth Gap: Optical cameras are blinded by darkness and only sample the top 10 microns of dust. "
          "Earth teleoperation is impossible due to communication shadows and 3-second roundtrip delays.\n\n"
-         "Core Mission Objective: Develop an autonomous rover combining subsurface radar sounding (0–3 m) "
+         "Core Mission Objective: Develop an autonomous prospecting payload combining subsurface radar sounding (0–3 m) "
          "with active optical spectroscopy (0.5–2.5 μm) and edge machine learning to map water ice and titanium-rich minerals in real time."),
 
         ("Panel 2: Hierarchical Autonomy Architecture (L0 / L1 / L2)",
-         "L-MINER implements a 3-tier decoupled autonomy framework guaranteeing mission safety and battery preservation:\n\n"
+         "L-MINER payload architecture implements a 3-tier decoupled autonomy framework guaranteeing mission safety and battery preservation:\n\n"
          "• L0 Safety Reflex (10 Hz): Real-time obstacle bypass using HazCam point-clouds. Blocks drive into slopes >15° or boulders >0.75 hazard score.\n\n"
          "• L1 Resource & Thermal Manager (1 Hz): Monitors battery state of charge (SoC) and electronics temperatures. Automatically pauses scans at SoC < 30% or T > 50°C and initiates solar panel recharge cycles.\n\n"
          "• L2 Science Prospecting (On Demand): Executes multi-physics sensor sounding, edge feature engineering, and Random Forest classification upon reaching designated science coordinates."),
@@ -255,7 +255,7 @@ def build_doc2_docx(filepath):
         ("Panel 5: Interactive 3D Digital Twin & Mission Control HUD",
          "Full cyber-physical demonstration environment built with Streamlit and Plotly WebGL:\n\n"
          "• 3D Lunar Polar Digital Twin: High-density 96 x 96 crater terrain mesh with 3° low-angle polar solar illumination, "
-         "6-wheel rocker-bogie rover mesh, terrain-following pitch/roll adaptation, and subsurface deposit spheres sized by ML confidence.\n\n"
+         "6-wheel rocker-bogie mobile host platform, terrain-following pitch/roll adaptation, and subsurface deposit spheres sized by ML confidence.\n\n"
          "• Aerospace Mission HUD: Real-time telemetry cards, dual GPR B-scan + A-scan energy plots, "
          "USGS laboratory benchmark overlay curves, and autonomous survey sequence controls."),
 
@@ -289,11 +289,11 @@ def build_doc2_docx(filepath):
     layout_blocks = [
         ("SECTION 1: MISSION DRIVERS\n• Lunar South Pole Cold Traps\n• Ground Truth Gap diagram\n• High-contrast crater photo",
          "SECTION 3: SENSORS & PHYSICS\n• 500 MHz GPR underbelly diagram\n• VNIR-SWIR Spectrometer arm\n• Dielectric vs Reflectance curves",
-         "SECTION 5: 3D DIGITAL TWIN\n• 3D Rover mesh on polar terrain\n• Subterranean deposit ellipsoids\n• GPR sounding radar cone render"),
+         "SECTION 5: 3D DIGITAL TWIN\n• 3D Payload & Host Platform on polar terrain\n• Subterranean deposit ellipsoids\n• GPR sounding radar cone render"),
         ("SECTION 2: HIERARCHICAL AUTONOMY\n• L0 Safety Reflex state diagram\n• L1 Battery & Thermal thresholds\n• L2 Science trigger logic",
          "SECTION 4: MACHINE LEARNING\n• 10-D Feature extraction flowchart\n• Random Forest architecture\n• Confusion Matrix (95.8% Acc)",
          "SECTION 6: ISRU VOLATILE MAP\n• 6x6 Survey grid resource map\n• ~57.8 Tonnes Water Ice calculation\n• LOX/LH2 Propellant production chart"),
-        ("FIGURE 1:\nRover mechanical layout & sensor integration callouts.",
+        ("FIGURE 1:\nPayload physical layout & host platform integration callouts.",
          "FIGURE 2:\nGPR B-scan paired with A-scan energy profile & USGS comparison.",
          "FIGURE 3:\nLive Streamlit Mission HUD screenshot with real-time telemetry."),
         ("PANEL FOOTER 1:\nFunding & IST Department Acknowledgments.",
@@ -381,7 +381,7 @@ def build_doc2_pdf(filepath):
 
     # Meta Table
     meta_data = [
-        [Paragraph("<b>Poster Title:</b> L-MINER Mk-II Rover", style_tbl_cell), Paragraph("<b>Format:</b> ISO A0 Portrait (841 x 1189 mm) / 300 DPI", style_tbl_cell)],
+        [Paragraph("<b>Poster Title:</b> L-MINER Mk-II Autonomous Science Payload", style_tbl_cell), Paragraph("<b>Format:</b> ISO A0 Portrait (841 x 1189 mm) / 300 DPI", style_tbl_cell)],
         [Paragraph("<b>Scoring Item:</b> Item 2: Poster (10 Pts)", style_tbl_cell), Paragraph("<b>Authors:</b> Haider, Wasay, Saad, Hajra (IST)", style_tbl_cell)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 247])
@@ -413,7 +413,7 @@ def build_doc2_pdf(filepath):
     # Section 2: Header Copy Callout
     elements.append(Paragraph("2. Poster Header & Team Information Block", style_h1))
     h_text = (
-        "<b>POSTER TITLE (96 pt Bold):</b> L-MINER Mk-II: Autonomous Multi-Tier Rover for Subsurface Lunar Volatile Prospecting and Mineral Classification<br/>"
+        "<b>POSTER TITLE (96 pt Bold):</b> L-MINER Mk-II: Autonomous Multi-Tier Payload for Subsurface Lunar Volatile Prospecting and Mineral Classification<br/>"
         "<b>SUBTITLE (44 pt Medium):</b> Dual-Modality Subsurface GPR and VNIR-SWIR Spectrometry with Edge Machine Learning for Lunar South Pole Cold Traps<br/>"
         "<b>AUTHORS (32 pt):</b> Haider Taqvee¹, Abdul Wasay¹, Saad¹, Hajra¹<br/>"
         "<b>AFFILIATION (24 pt):</b> ¹ Department of Space Science & Aeronautics, Institute of Space Technology (IST), Islamabad, Pakistan<br/>"

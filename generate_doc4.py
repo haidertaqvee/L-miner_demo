@@ -152,7 +152,7 @@ def build_doc4_docx(filepath):
     tbl_meta = doc.add_table(rows=2, cols=2)
     tbl_meta.alignment = WD_TABLE_ALIGNMENT.CENTER
     meta_data = [
-        ("Project:", "L-MINER Mk-II Lunar Prospector",
+        ("Project:", "L-MINER Mk-II Autonomous Prospecting Payload",
          "Institution:", "Institute of Space Technology (IST), Islamabad"),
         ("Scoring Focus:", "Item 5 (Work Display: 25 Pts) + Item 6 (PPT: 10 Pts) + Item 7 (Artistry: 5 Pts)",
          "Presentation Duration:", "10 Minutes Presentation + 5 Minutes Judge Q&A Defense")
@@ -239,7 +239,7 @@ def build_doc4_docx(filepath):
         ("Slide 1: Title & Mission Vision\n(0:00 - 0:45 | Speaker: Haider)",
          "Visual: High-contrast render of L-MINER on lunar crater rim with glowing cyan sensor beam.\n"
          "Script: 'Honorable judges and organizing committee, good morning. We are Team L-MINER from the Institute of Space Technology, "
-         "Islamabad. Today, we present L-MINER Mk-II: an autonomous multi-tier rover engineered for subsurface volatile prospecting "
+         "Islamabad. Today, we present L-MINER Mk-II: an autonomous multi-tier prospecting payload engineered for subsurface volatile detection "
          "and mineral classification in the cryogenic cold traps of the lunar South Pole.'"),
 
         ("Slide 2: The Planetary Challenge\n(0:45 - 1:30 | Speaker: Haider)",
@@ -287,7 +287,7 @@ def build_doc4_docx(filepath):
 
         ("Slide 9: LIVE DEMO: Mission HUD & 3D Twin\n(6:00 - 7:30 | Speakers: Hajra & Saad)",
          "Visual: Live screen-switch to interactive Streamlit Mission Control HUD and 3D WebGL Digital Twin.\n"
-         "Script: [Hajra] 'Let us examine the live system in operation. Here on our Mission HUD, you see the real-time avionics telemetry. "
+         "Script: [Hajra] 'Let us examine the live system in operation. Here on our Mission HUD, you see the real-time payload avionics telemetry. "
          "When we command a scan, our dual GPR and spectrometer plots immediately generate measured curves against laboratory standards.'\n"
          "[Saad] 'Opening the 3D Digital Twin, judges can observe the 96x96 polar terrain under 3-degree low-angle solar lighting. "
          "As the rover moves, subterranean deposit ellipsoids appear at their exact classified depths, scaled by machine learning confidence.'"),
@@ -301,7 +301,7 @@ def build_doc4_docx(filepath):
 
         ("Slide 11: Performance Benchmarking\n(8:15 - 8:45 | Speaker: Wasay)",
          "Visual: Comparative benchmark table: L-MINER vs. Traditional Teleoperated Rovers.\n"
-         "Script: 'Comparing L-MINER against conventional space rovers demonstrates a 14x increase in survey throughput, "
+         "Script: 'Comparing L-MINER against conventional teleoperated planetary payloads demonstrates a 14x increase in survey throughput, "
          "zero Earth-operator latency bottlenecks, and 100% mission survivability across 36 test cells.'"),
 
         ("Slide 12: Team Roster & Collaborative Workflow\n(8:45 - 9:15 | Speaker: Hajra)",
@@ -317,7 +317,7 @@ def build_doc4_docx(filepath):
 
         ("Slide 14: Conclusion & Q&A Defense\n(9:45 - 10:00 | Speaker: Haider)",
          "Visual: Mission summary takeaway slide with team contact information and project QR code.\n"
-         "Script: 'In conclusion, L-MINER Mk-II proves that autonomous multi-tier rovers can unlock the resources of the lunar South Pole. "
+         "Script: 'In conclusion, L-MINER Mk-II proves that autonomous multi-tier science payloads can unlock the resources of the lunar South Pole. "
          "Thank you, honorable judges. We are now ready for your questions.'")
     ]
 
@@ -413,7 +413,7 @@ def build_doc4_pdf(filepath):
 
     # Meta Table
     meta_data = [
-        [Paragraph("<b>Project:</b> L-MINER Mk-II Lunar Prospector", style_tbl_cell), Paragraph("<b>Institution:</b> Institute of Space Technology (IST), Islamabad", style_tbl_cell)],
+        [Paragraph("<b>Project:</b> L-MINER Mk-II Autonomous Prospecting Payload", style_tbl_cell), Paragraph("<b>Institution:</b> Institute of Space Technology (IST), Islamabad", style_tbl_cell)],
         [Paragraph("<b>Scoring Focus:</b> Items 5 (25 Pts), 6 (10 Pts), 7 (5 Pts)", style_tbl_cell), Paragraph("<b>Duration:</b> 10 Min Pitch + 5 Min Q&A Defense", style_tbl_cell)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 247])
@@ -469,7 +469,7 @@ def build_doc4_pdf(filepath):
 
     slides_summary = [
         [Paragraph("Slide & Timing", style_tbl_hdr), Paragraph("Speaker", style_tbl_hdr), Paragraph("Core Message & Technical Content", style_tbl_hdr)],
-        [Paragraph("<b>1. Title & Vision</b> (0:00-0:45)", style_tbl_cell), Paragraph("Haider", style_tbl_cell), Paragraph("Introduction to L-MINER Mk-II: Autonomous lunar polar volatile prospecting.", style_tbl_cell)],
+        [Paragraph("<b>1. Title & Vision</b> (0:00-0:45)", style_tbl_cell), Paragraph("Haider", style_tbl_cell), Paragraph("Introduction to L-MINER Mk-II: Autonomous lunar polar volatile prospecting payload.", style_tbl_cell)],
         [Paragraph("<b>2. Cold Traps</b> (0:45-1:30)", style_tbl_cell), Paragraph("Haider", style_tbl_cell), Paragraph("The Ground-Truth Gap: Why orbital sensors cannot resolve subsurface ice volume.", style_tbl_cell)],
         [Paragraph("<b>3. System Concept</b> (1:30-2:15)", style_tbl_cell), Paragraph("Haider", style_tbl_cell), Paragraph("Dual-modality payload: 500 MHz GPR (depth) + VNIR-SWIR Spectrometer (chemistry).", style_tbl_cell)],
         [Paragraph("<b>4. 3-Tier Autonomy</b> (2:15-3:00)", style_tbl_cell), Paragraph("Saad", style_tbl_cell), Paragraph("L0 Safety Reflex (10 Hz), L1 Resource Manager (1 Hz), L2 Cognitive Science Layer.", style_tbl_cell)],

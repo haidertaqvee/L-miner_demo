@@ -137,14 +137,14 @@ def build_doc3_docx(filepath):
     r_tag = p_meta.add_run("ISSSP 2026 — TRACK 3 FINALS: ITEMS 3 & 4 (TOPIC SELECTION & RESEARCH CONTENT — 40 POINTS)\n")
     r_tag.font.name = "Segoe UI"; r_tag.font.size = Pt(9); r_tag.font.bold = True; r_tag.font.color.rgb = ACCENT
 
-    r_title = p_meta.add_run("L-MINER: Autonomous Multi-Tier Rover for Subsurface Lunar Volatile Prospecting and Mineral Classification")
+    r_title = p_meta.add_run("L-MINER: Autonomous Multi-Tier Payload for Subsurface Lunar Volatile Prospecting and Mineral Classification")
     r_title.font.name = "Segoe UI"; r_title.font.size = Pt(21); r_title.font.bold = True; r_title.font.color.rgb = PRIMARY
 
     p_sub = doc.add_paragraph()
     p_sub.paragraph_format.space_after = Pt(12)
     r_sub = p_sub.add_run(
         "Technical Research Paper & Engineering Program: Dual-Modality Radar-Spectrometer Sounding, "
-        "Edge Machine Learning, and Hierarchical Autonomy for In-Situ Resource Utilization (ISRU)"
+        "Edge Machine Learning, and Hierarchical Autonomy for In-Situ Resource Utilization (ISRU) on Mobile Exploration Platforms"
     )
     r_sub.font.name = "Segoe UI"; r_sub.font.size = Pt(11); r_sub.font.color.rgb = SECONDARY
 
@@ -175,7 +175,7 @@ def build_doc3_docx(filepath):
         "is a cornerstone requirement for sustainable human lunar presence and In-Situ Resource Utilization (ISRU). "
         "However, Permanently Shadowed Regions (PSRs) present extreme operational constraints: cryogenic temperatures (<40 K), "
         "zero ambient solar illumination, direct-to-Earth communication shadows, and communications latency that prohibit manual teleoperation. "
-        "This paper introduces L-MINER Mk-II, an autonomous multi-tier prospecting rover system. "
+        "This paper introduces L-MINER Mk-II, an autonomous multi-tier prospecting payload system (demonstrated on a mobile platform). "
         "The architecture combines a 500 MHz Ground Penetrating Radar (GPR) for subsurface stratigraphy (0–3.0 m) "
         "and an actively illuminated Visible to Short-Wave Infrared (VNIR-SWIR, 0.5–2.5 μm) reflectance spectrometer. "
         "A decoupled 3-tier hierarchical autonomy framework governs vehicle operations: L0 reactive hazard avoidance (10 Hz), "
@@ -206,7 +206,7 @@ def build_doc3_docx(filepath):
         "and ambiguous bistatic surface roughness effects.\n"
         "3. Lack of Volumetric Ground Truth: Commercial and scientific ISRU extraction requires high-resolution depth stratification, "
         "layer thickness measurement, and overburden assessment (how much barren regolith must be excavated to reach pure volatile layers). "
-        "Only an in-situ surface rover can bridge this 'Ground-Truth Gap'."
+        "Only an in-situ surface payload deployed on a mobile platform can bridge this 'Ground-Truth Gap'."
     )
 
     doc.add_heading("1.2 The Necessity of Autonomous Multi-Tier Control", level=2)
@@ -239,7 +239,7 @@ def build_doc3_docx(filepath):
     p = doc.add_paragraph()
     p.paragraph_format.line_spacing = 1.15
     p.add_run(
-        "L-MINER rejects monolithic robotic controllers in favor of a layered, fault-tolerant hierarchical architecture. "
+        "L-MINER's payload architecture decouples science acquisition, resource preservation, and vehicle mobility reflexes. "
         "The autonomy pipeline is partitioned into three strictly decoupled operational layers with decreasing temporal frequency "
         "and increasing cognitive complexity:"
     )
@@ -425,10 +425,10 @@ def build_doc3_pdf(filepath):
     elements = []
 
     elements.append(Paragraph("ISSSP 2026 — TRACK 3 FINALS: ITEMS 3 & 4 (TOPIC SELECTION & RESEARCH CONTENT — 40 POINTS)", style_meta))
-    elements.append(Paragraph("L-MINER: Autonomous Multi-Tier Rover for Subsurface Lunar Volatile Prospecting and Mineral Classification", style_title))
+    elements.append(Paragraph("L-MINER: Autonomous Multi-Tier Payload for Subsurface Lunar Volatile Prospecting and Mineral Classification", style_title))
     elements.append(Paragraph(
         "Technical Research Paper & Engineering Program: Dual-Modality Radar-Spectrometer Sounding, "
-        "Edge Machine Learning, and Hierarchical Autonomy for In-Situ Resource Utilization (ISRU)",
+        "Edge Machine Learning, and Hierarchical Autonomy for In-Situ Resource Utilization (ISRU) on Mobile Exploration Platforms",
         style_subtitle
     ))
 

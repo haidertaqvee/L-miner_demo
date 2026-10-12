@@ -1,12 +1,12 @@
-# 🌙 L-MINER Mk-II: Autonomous Lunar South Pole Mineral Detection & ISRU Prospecting System
+# 🌙 L-MINER Mk-II: Autonomous Lunar South Pole Mineral Detection & ISRU Prospecting Payload System
 
 > **Built for ISSSP 2026 (Track 3: Lunar Surface Robotics & Autonomous Systems)**  
 > **Institution:** Department of Space Science & Aeronautics, Institute of Space Technology (IST), Islamabad  
 > **Faculty Advisor:** Dr. Sajid Ghuffar, Institute of Space Technology  
 > **Team Roster:** Led by **Haider Taqveen**, with **Hajra**, **Abdul Wasay**, **Saad**, **Mohsin**, and **Adan**  
-> • **Haider Taqveen** — Physical Sensor Modeling & GPR/Spectrometer Simulation Lead  
+> • **Haider Taqveen** — Physical Sensor Modeling & GPR/Spectrometer Payload Lead  
 > • **Abdul Wasay** — Machine Learning & Edge Mineral Classifier Lead  
-> • **Saad** — Autonomous Safety (L0 Reflex & L1 Resource Management) Lead  
+> • **Saad** — Payload Autonomy (L0 Safety Reflex & L1 Resource Management) Lead  
 > • **Hajra** — Human-Machine Interface, Streamlit HUD & Communications Specialist  
 
 ---
