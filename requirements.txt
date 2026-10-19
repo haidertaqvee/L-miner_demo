@@ -1,0 +1,5 @@
+streamlit>=1.50.0
+plotly>=5.9.0
+numpy>=1.24.4
+scikit-learn>=1.6.1
+matplotlib>=3.5.2
